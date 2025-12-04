@@ -2,5 +2,31 @@
 ---
 
 @string{aps = {American Physical Society,}}
+@inproceedings{10.1145/3721146.3721937,
+author = {Lai, Ruiqi and Cao, Siyu and Li, Leqi and Mai, Luo and Ustiugov, Dmitrii},
+title = {Manage the Workloads not the Cluster: Designing a Control Plane for Large-Scale AI Clusters},
+year = {2025},
+isbn = {9798400715389},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3721146.3721937},
+doi = {10.1145/3721146.3721937},
+abstract = {The rapid adoption of large language model (LLM) services, such as ChatGPT and DeepSeek, has created unprecedented demand for computational resources, particularly on accelerator-equipped clusters (e.g., GPUs, NPUs). These workloads present unique challenges due to their highly dynamic traffic patterns and multi-dimensional resource demands, including power, memory, and computing. Existing GPU cluster management systems fall short, as they treat accelerators as monolithic units and allocate resources once at the placement time, leading to imbalanced utilization of the above three resource types across the cluster. To address these issues, we propose redefining the LLM serving cluster management as a bin-packing problem, where the resource-specific budgets abstract away hardware resources. We introduce Shapeshifter, the cluster manager that dynamically adjusts the workload deployments to balance the utilization levels of all three resources in the GPUs across the cluster. Shapeshifter monitors resource demands of LLM workload, abstracts away hardware resources with multi-dimensional resource budgets and continuously re-balances resource utilization of LLM workload before allocation of hardware resources. ShapeShifter aims to increase GPU cluster utilization and deployment density while delivering high-quality LLM inference serving. Key future research directions include exploring multidimensional model placement, exploring rapid resource rebalancing mechanisms without service disruption, and efficient scheduler policy design.},
+booktitle = {Proceedings of the 5th Workshop on Machine Learning and Systems},
+pages = {246–253},
+numpages = {8},
+location = {World Trade Center, Rotterdam, Netherlands},
+series = {EuroMLSys '25}
+}
+
+@misc{lai2025tokenscaletimelyaccurateautoscaling,
+      title={TokenScale: Timely and Accurate Autoscaling for Disaggregated LLM Serving with Token Velocity}, 
+      author={Ruiqi Lai and Hongrui Liu and Chengzhi Lu and Zonghao Liu and Siyu Cao and Siyang Shao and Yixin Zhang and Luo Mai and Dmitrii Ustiugov},
+      year={2025},
+      eprint={2512.03416},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC},
+      url={https://arxiv.org/abs/2512.03416}, 
+}
 
 
