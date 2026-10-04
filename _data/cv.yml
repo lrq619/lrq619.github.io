@@ -1,97 +1,123 @@
 - title: General Information
   type: map
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
-
+  - name: Name
+    value: Ruiqi Lai
+  - name: Label
+    value: PhD Student, Nanyang Technological University
+  - name: Email
+    value: RUIQI003@e.ntu.edu.sg
+  - name: Phone
+    value: (+65) 81776559
+  - name: Url
+    value: https://lrq619.github.io
+  - name: Summary
+    value: 'Research interests: LLM inference, serverless computing, autoscaling, and distributed systems.'
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
+  - title: PhD Student
+    institution: Nanyang Technological University
+    year: 2023-08 – Present
+    description:
+    - 'Research interests: LLM inference, serverless computing, autoscaling, and distributed systems.'
+  - title: Bachelor of Engineering
+    institution: Shanghai Jiao Tong University, University of Michigan–SJTU Joint Institute
+    year: 2019-09 – 2023-08
+    description:
+    - Electrical and Computer Engineering
+    - 'Relevant coursework: Data Structures, Algorithms, Digital Circuits, Computer Architecture, Operating
+      Systems, GPU Parallel Computing, and Distributed Cloud Computing.'
+- title: Work Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+  - title: Incoming Research Intern (Hired; Not Yet Started)
+    institution: NVIDIA
+    year: Starting Jan 2027
+    location: Santa Clara, CA, USA
+    description:
+    - 'Planned research focus: inference optimization.'
+  - title: Research Intern
+    institution: Alibaba, Platform Technology – AI Training Engine
+    year: 2026-03 – Present
+    location: Beijing, China
+    description:
+    - Independently designed and implemented the Diffusion Transformer (DiT) model abstraction layer in
+      ROLL, introducing unified interfaces for diffusion model forward passes, sampling, trajectory generation,
+      and intermediate training states. Provided consistent execution interfaces for training and inference
+      engines, decoupling model implementations from backend systems and substantially improving ROLL’s
+      adaptability to DiT workloads.
+    - Implemented full support for FlowGRPO and DiffNFT post-training algorithms and completed end-to-end,
+      multi-node, multi-GPU training of the 20B-parameter Qwen-Image model. Across approximately 400 GPU-hours
+      of experiments, improved aggregate scores on multiple established DiT post-training datasets from
+      approximately 0.3 to 0.9. Human evaluation confirmed substantial improvements in rendered text accuracy,
+      semantic consistency, and overall visual quality.
+    - Built an end-to-end post-training pipeline for Qwen-Image, integrating FSDP2-based distributed training
+      with vLLM-Omni-based parallel inference and rollout generation. Enabled the complete workflow from
+      model loading and distributed training to online sampling, reward computation, and post-training
+      inference validation.
+    - Released as the Diffusion RL support in <a href="https://github.com/alibaba/ROLL/releases/tag/v0.4.0">ROLL
+      v0.4.0</a>, with the contribution credited in the official release notes.
+    - Led the Spotlight research project, jointly optimizing system infrastructure and algorithms for
+      DiT post-training.
+  - title: Software Engineering Intern
+    institution: ByteDance
+    year: 2021-12 – 2022-05
+    location: Shanghai, China
+    description:
+    - Contributed to distributed file system development in C/C++ for ByteDance’s Volcengine cloud services
+      and added a new data node to a Hadoop cluster.
+- title: Research Experience
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
+  - title: Spotlight
+    year: 2026-03 – 2026-06
+    maindescription: PhD Student · Beijing, China
+    description:
+    - Proposed Spotlight, a system that uses low-cost spot GPUs for reinforcement learning post-training
+      of Diffusion Transformers, reducing training costs to one-seventh of the baseline.
+    - Designed dynamic seed exploration to offload the search for high-quality seeds to spot GPUs during
+      training, along with elastic sequence parallelism that adjusts the parallelism degree to spot GPU
+      availability in real time.
+    - Built a preemption-aware scheduler with tensor checkpointing to bound lost computation when spot
+      instances are preempted.
+  - title: TokenScale
+    year: 2024-10 – 2025-11
+    maindescription: PhD Student · Singapore
+    description:
+    - Proposed TokenScale, a proactive autoscaling system for LLM inference with prefill/decode disaggregation,
+      enabling timely and accurate resource scaling based on token-level workload dynamics. Accepted to
+      ACM SoCC’26.
+    - Implemented a cluster-level LLM inference control plane in approximately 6,000 lines of Go, including
+      a traffic gateway, autoscaler, and router with support for advanced routing and autoscaling policies.
+    - Demonstrated operation on a 32-node AMD/NVIDIA cluster, improving performance by up to 36% while
+      reducing costs.
+  - title: Liquid
+    year: 2023-08 – 2024-08
+    maindescription: PhD Student · Beijing, China
+    description:
+    - Proposed and implemented Liquid on top of vLLM, an autoscaling mechanism for LLM inference that
+      dynamically adjusts parallelism to allocate resources across multiple dimensions and improve overall
+      resource utilization.
+- title: Publications and Preprints
   type: time_table
   contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+  - title: '<a href="https://doi.org/10.1145/3721146.3721937">Manage the Workloads, not the Cluster: Designing
+      a Control Plane for Large-Scale AI Clusters.</a>'
+    year: '2025'
+    institution: EuroMLSys@ASPLOS/EuroSys’25
+    description:
+    - Ruiqi Lai, Siyu Cao, Leqi Li, Luo Mai, Dmitrii Ustiugov.
+  - title: '<a href="https://arxiv.org/abs/2512.03416">TokenScale: Timely and Accurate Autoscaling for
+      Disaggregated LLM Serving with Token Velocity</a>'
+    year: '2026'
+    institution: ACM Symposium on Cloud Computing (SoCC’26) — Accepted
+    description:
+    - Ruiqi Lai, Hongrui Liu, Siyu Cao, Siyang Shao, Yixin Zhang, Chengzhi Liu, Dmitrii Ustiugov.
+  - title: '<a href="https://arxiv.org/abs/2606.19004">SPOTLIGHT: Synergizing Seed Exploration and Spot
+      GPUs for DiT RL Post-Training</a>'
+    year: '2026'
+    institution: arXiv preprint
+    description:
+    - Ruiqi Lai, Dakai An, Wei Gao, Ju Huang, Siran Yang, Jiamang Wang, Lin Qu, Dmitrii Ustiugov, Wei
+      Wang.

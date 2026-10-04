@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Systems for efficient AI inference and post-training.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [research, open source]
 horizontal: false
 ---
 
